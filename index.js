@@ -37,7 +37,7 @@ class Test extends Component {
       return {
         top: this.state.top,
         position: 'fixed',
-        width: 500,
+        width: '100%',
         boxShadow: '0px 5px 5px #888888'
       }
     } else {
@@ -47,7 +47,7 @@ class Test extends Component {
 
   render() {
     return (
-      <div style={{width: 500}}>
+      <div style={{width: '100%'}}>
         {this.first}
         <div style={{height: 100}}>
           <Sticky topOffset={this.offset} stickyStyle={{}} onStickyStateChange={v => this.handleChange(v)}>
