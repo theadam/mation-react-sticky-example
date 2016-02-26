@@ -23,7 +23,7 @@ class Test extends Component {
   handleChange(e) {
     this.stuck = e;
     if(e) {
-      this.mation.moveTo(spring(0, presets.gentle));
+      this.mation.moveTo(spring(0, presets.wobbly));
       this.offset = 0;
     }
     else {
@@ -37,7 +37,8 @@ class Test extends Component {
       return {
         top: this.state.top,
         position: 'fixed',
-        width: 500
+        width: 500,
+        boxShadow: '0px 5px 5px #888888'
       }
     } else {
       return undefined;
