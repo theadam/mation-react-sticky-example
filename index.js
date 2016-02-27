@@ -9,7 +9,8 @@ class Test extends Component {
   state = {
     top: -100
   };
-  mation = Mation(-100);
+  initialValue = -150;
+  mation = Mation(this.initialValue);
   first = lorem({count: 4, units: 'paragraphs'});
   last = lorem({count: 100, units: 'paragraphs'});
   stuck = false;
@@ -27,7 +28,7 @@ class Test extends Component {
       this.offset = 0;
     }
     else {
-      this.mation.moveTo(-100);
+      this.mation.moveTo(this.initialValue);
       this.offset = 100;
     }
   }
